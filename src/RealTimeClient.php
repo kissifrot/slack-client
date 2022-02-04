@@ -68,7 +68,7 @@ class RealTimeClient extends ApiClient
     protected $bots = [];
 
     /**
-     * @var \Zend\Log\Logger Logger for this client
+     * @var \Laminas\Log\Logger Logger for this client
      */
     protected $logger = null;
 
@@ -79,8 +79,8 @@ class RealTimeClient extends ApiClient
     {
         parent::__construct($loop, $httpClient);
 
-        $this->logger = new \Zend\Log\Logger();
-        $this->logger->addWriter(new \Zend\Log\Writer\Stream('php://stderr'));
+        $this->logger = new \Laminas\Log\Logger();
+        $this->logger->addWriter(new \Laminas\Log\Writer\Stream('php://stderr'));
     }
 
     /**
